@@ -1,10 +1,10 @@
 (function() {
-  var factorNumber;
+  var factorNumber = 50;
   function FactorService() {
     return {
-      primeFactor: PrimeFactor,
+      primeFactor: primeFactor,
       isPrime: isPrime,
-      setNumber: setNumber
+      setNumber: setNumber,
       getFactors: getFactors
     }
   }
@@ -31,7 +31,7 @@
       }
     }
     return pfs;
-    console.log("Prime Factorial List:" pfs)
+    console.log("Prime Factorial List:", pfs);
   }
 
   function setNumber(inputNumber) {
@@ -45,7 +45,7 @@
 
   angular
     .module("app")
-    .Factory("FactorService", FactorService);
+    .factory("FactorService", FactorService);
 
 }());
 
