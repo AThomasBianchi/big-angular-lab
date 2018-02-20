@@ -21,9 +21,7 @@
     };
 
   }
+
   angular.module("app")
     .factory("factsService",factsService)
 }());
-
-
-"https://numbersapi.p.mashape.com/42/trivia?fragment=true&json=true&notfound=floor"
