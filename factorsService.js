@@ -1,5 +1,5 @@
 (function() {
-  var factorNumber = 50;
+  var factorNumber;
   function FactorService() {
     return {
       primeFactor: primeFactor,
