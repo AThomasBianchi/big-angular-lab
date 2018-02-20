@@ -2,7 +2,7 @@
   var factsComponent = {
     template: `
               <div>
-              <p>{{ $ctrl.num }}</p>
+              
 
               <p>{{ $ctrl.facts.text }}</p>
 
@@ -11,8 +11,8 @@
     `,
     controller: function(factsService){
       var $ctrl = this
-      $ctrl.num = 55;
-      factsService.getApi($ctrl.num).then(function(facts) {
+      // $ctrl.num = factsService.num;
+      factsService.getApi().then(function(facts) {
           $ctrl.facts = facts;
 
       });

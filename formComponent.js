@@ -7,12 +7,13 @@
       <button type="submit">Enter the number</button>
     </form>
     `,
-    controller: function(FactorService) {
+    controller: function(FactorService, factsService) {
       var $ctrl = this;
       $ctrl.number;
       $ctrl.setNumberTwice = function() {
         console.log($ctrl.number);
         FactorService.setNumber($ctrl.number);
+        factsService.setNumber($ctrl.number);
       }
     }
   }
