@@ -7,7 +7,7 @@
       <button type="submit">Enter the number</button>
     </form>
     `,
-    controller: function(FactorService) {
+    controller: function(FactorService, FactService) {
       var $ctrl = this;
       $ctrl.number;
       $ctrl.setNumberTwice = function() {
