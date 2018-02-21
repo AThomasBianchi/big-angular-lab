@@ -1,7 +1,7 @@
 (function() {
   var factorsComponent = {
     template: `
-    <h1>Here are the prime factors for your number:</h1> 
+    <h3>Here are the prime factors for your number:</h3> 
     <p ng-repeat="factor in $ctrl.factors track by $index">{{ factor }}</p>
     `,
     controller: function(FactorService) {
