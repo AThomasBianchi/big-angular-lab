@@ -35,3 +35,17 @@ button {
 	margin-top: 10px;
 	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+.showDiv {
+transition: all linear 0.5s;
+height: 100px;
+width: 100%;
+position: relative;
+top: 0;
+left: 0;
+}
+
+.ng-hide {
+/* height: 0;
+width: 0; */
+top:200px;
+}

@@ -6,7 +6,7 @@
       <input type="number" ng-model="$ctrl.number">
       <button type="submit">SUBMIT NUMBER</button>
     </form>
-    <div ng-show="$ctrl.truthy">
+    <div class="showDiv" ng-show="$ctrl.truthy">
       <h2> Your number is: </h2>
       <p> {{ $ctrl.number }} </p>
       <nav>
