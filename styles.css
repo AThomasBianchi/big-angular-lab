@@ -1,0 +1,22 @@
+body {
+	background: linear-gradient(to right, #00c9ff, #92fe9d);
+	text-align: center;
+}
+
+h1 {
+	color: white;
+}
+
+a {
+	color: white;
+	font-size: 30px;
+	margin: 15px;
+}
+
+p {
+	color: white;
+}
+
+h3 {
+	color: white;
+}
