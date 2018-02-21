@@ -52,6 +52,7 @@ left: 0;
 /* height: 0;
 width: 0; */
 top:200px;
+transform:rotateY(180deg);
 }
 
 .result {
