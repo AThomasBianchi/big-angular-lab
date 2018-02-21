@@ -22,9 +22,11 @@
       $ctrl.truthy = false;
       $ctrl.number;
       $ctrl.setNumberTwice = function() {
-        FactorService.setNumber($ctrl.number);
-        factsService.setNumber($ctrl.number);
-        $ctrl.truthy = true;
+        if($ctrl.number){
+          FactorService.setNumber($ctrl.number);
+          factsService.setNumber($ctrl.number);
+          $ctrl.truthy = true;
+        }
       }
       $ctrl.reset = function() {
         $ctrl.truthy = false;
