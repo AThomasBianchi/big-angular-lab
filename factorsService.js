@@ -21,6 +21,9 @@
   function primeFactor(bigNum) {
     var pfs = [];
     var i = 2;
+    if (bigNum === 1 || bigNum === 0) {
+      return [ "That number is too small to have a prime factor." ]
+    }
     while (i <= bigNum) {
       if ( !(bigNum % i === 0) || !(isPrime(i)) ) {
         i++;
