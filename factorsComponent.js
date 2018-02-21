@@ -1,7 +1,7 @@
 (function() {
   var factorsComponent = {
     template: `
-    <p> <span ng-repeat="factor in $ctrl.factors track by $index">{{ factor }}  </span></p>
+    <div class="result"><p> <span ng-repeat="factor in $ctrl.factors track by $index">{{ factor }}  </span></p></div>
     `,
     controller: function(FactorService) {
       vm = this;

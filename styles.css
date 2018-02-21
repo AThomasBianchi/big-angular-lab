@@ -21,6 +21,8 @@ a {
 input {
 	font-size: 16px;
 	text-align: center;
+	border-radius: 5px;
+
 }
 
 button {
@@ -48,4 +50,17 @@ left: 0;
 /* height: 0;
 width: 0; */
 top:200px;
+}
+
+.result {
+	border-radius: 5px;
+	background-color: white;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.result p {
+	color: black;
+	padding: 5px;
 }
