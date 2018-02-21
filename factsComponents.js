@@ -1,8 +1,8 @@
 (function() {
   var factsComponent = {
     template: `
-              <div>
-              
+              <div class="result">
+
 
               <p>{{ $ctrl.facts.text }}</p>
 
