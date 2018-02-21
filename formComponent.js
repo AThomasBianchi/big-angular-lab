@@ -1,10 +1,10 @@
 (function() {
   var formComponent = {
     template: `
-    <h1>Enter a Number:</h1>
+    <h2>Enter a Number:</h2>
     <form ng-submit="$ctrl.setNumberTwice();">
       <input type="number" ng-model="$ctrl.number">
-      <button type="submit">Enter the number</button>
+      <button type="submit">SUBMIT NUMBER</button>
     </form>
     <div ng-show="$ctrl.truthy">
       <h2> Your number is: </h2>

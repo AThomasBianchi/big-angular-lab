@@ -1,26 +1,37 @@
+@font-face {
+	font-family: "Roboto Mono";
+	src: url("Roboto-Mono/RobotoMono-Medium.ttf");
+}
+
 body {
 	background: linear-gradient(to right, #00c9ff, #92fe9d);
 	text-align: center;
+	font-family: "Roboto Mono";
 }
 
-h1 {
+h1, h2, h3, p, a {
 	color: white;
 }
 
 a {
-	color: white;
 	font-size: 20px;
 	margin: 15px;
 }
 
-p {
-	color: white;
+input {
+	font-size: 16px;
+	text-align: center;
 }
 
-h2 {
-	color: white;
-}
-
-h3 {
-	color: white;
+button {
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #fc8a00;
+	border: 2px solid white;
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
