@@ -35,7 +35,6 @@
     }
   }
 
-
   angular
     .module("app")
     .component("formComponent", formComponent);

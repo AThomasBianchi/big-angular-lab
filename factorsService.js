@@ -33,7 +33,7 @@
       } else {
         primeFactors.push(i);                         // if the number is both a factor and prime, add it the the prime factor list
         bigNum = bigNum / i;                          // reset the number to the remainder
-        i = 2;                                        // reset the factor to the smallest prime
+        i = 2;                                        // reset the potential factor to the smallest prime
       }
     }
     return primeFactors;
