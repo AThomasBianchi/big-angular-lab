@@ -2,48 +2,49 @@
   var factorNumber;
   function FactorService() {
     return {
-      primeFactor: primeFactor,
+      getPrimeFactors: getPrimeFactors,
       isPrime: isPrime,
       setNumber: setNumber,
       getFactors: getFactors
-    }
+    };
   }
 
+  // a function to check if a number is prime
   function isPrime(num) {
-    for (var i=2; i<num; i++) {
-      if (num % i === 0) {
-        return false;
+    for (var i=2; i<num; i++) {                       // for every integer between 1 and the number
+      if (num % i === 0) {                            // if that number divided by an integer has a remainder
+        return false;                                 // that number is not prime, stop looping and return false
       }
     }
-    return true;
+    return true;                                      // if the number is divisible by none of the integers, it's prime
   }
 
-  function primeFactor(bigNum) {
-    var pfs = [];
-    var i = 2;
-    if (bigNum === 1 || bigNum === 0) {
-      return [ "That number is too small to have a prime factor." ]
+  // a function that returns an array of the prime factors of a number
+  function getPrimeFactors(bigNum) {
+    var primeFactors = [];                            // an empty list to be filled with the prime numbers
+    var i = 2;                                        // start with 2, the smallest prime number
+
+    if (bigNum === 1 || bigNum === 0) {               // catch the numbers 0 and 1, which are smaller than the smalles prime number
+      return [ "That number is too small to have a prime factor." ];
     }
     while (i <= bigNum) {
-      if ( !(bigNum % i === 0) || !(isPrime(i)) ) {
-        i++;
+      if ( !(bigNum % i === 0) || !(isPrime(i)) ) {   // if the number is either not a factor or not prime, skip it
+        i++;                                          // and increment to the next number
       } else {
-        pfs.push(i);
-        bigNum = bigNum / i;
-        i = 2;
+        primeFactors.push(i);                         // if the number is both a factor and prime, add it the the prime factor list
+        bigNum = bigNum / i;                          // reset the number to the remainder
+        i = 2;                                        // reset the factor to the smallest prime
       }
     }
-    return pfs;
-    console.log("Prime Factorial List:", pfs);
+    return primeFactors;
   }
 
   function setNumber(inputNumber) {
     factorNumber = inputNumber;
-    console.log(factorNumber);
   }
 
   function getFactors() {
-    return primeFactor(factorNumber);
+    return getPrimeFactors(factorNumber);
   }
 
   angular
@@ -51,33 +52,3 @@
     .factory("FactorService", FactorService);
 
 }());
-
-
-// function isPrime(num) {
-//   for (var i=2; i<num; i++) {
-//     if (num % i === 0) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
-//
-//
-// function primeFactor(bigNum) {
-//   var pfs = [];
-//   var i = 2;
-//   while (i <= bigNum) {
-//     if ( !(bigNum % i === 0) || !(isPrime(i)) ) {
-//       i++;
-//       continue
-//     // } else if (!isPrime(i)) {
-//     //    i++;
-//     //    continue
-//     } else {
-//       pfs.push(i);
-//       bigNum = bigNum / i;
-//       i = 2;
-//     }
-//   }
-//   return pfs;
-// }
